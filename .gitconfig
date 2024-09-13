@@ -1,3 +1,7 @@
 [user]
 	email = iegoroff@gmail.com
 	name = iyegoroff
+[core]
+	excludesfile = $HOME/.gitignore_global
+[init]
+	defaultBranch = main
