@@ -8,7 +8,7 @@ family = "RobotoMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "RobotMono Nerd Font"
+family = "RobotoMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
