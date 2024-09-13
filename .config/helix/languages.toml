@@ -1,0 +1,4 @@
+[[language]]
+name = "openscad"
+auto-format = true
+formatter = { command = "clang-format", args = ["--style=file"] }

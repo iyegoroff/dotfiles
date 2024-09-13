@@ -1,0 +1,40 @@
+theme = "dark_plus"
+
+[editor]
+#line-number = "relative"
+mouse = false
+rulers = [88]
+true-color = true
+auto-save = true
+auto-format = true
+
+[editor.indent-guides]
+character = "╎"
+render = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+parents = false
+git-ignore = false
+
+[keys.normal]
+C-s = ":w"
+C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w85% -h85% -E lazygit"
+
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
