@@ -18,9 +18,9 @@ if [[ $platform == "Darwin" ]]; then
 
 else
   run_segment() {
-    free -hL --mega | sed -e 's/.*MemUse\s*\([0-9\.]*\)\(\S*\)\s*MemFree.*/ \1 \2/'
+    # free -hL --mega | sed -e 's/.*MemUse\s*\([0-9\.]*\)\(\S*\)\s*MemFree.*/ \1 \2/'
+    free -h --mega | grep Mem | sed -e 's/Mem:\s*[0-9\.]*\w*\s*\([0-9\.]*\)*\(\S*\).*/ \1 \2/'
     return 0
   }
 fi
-
 

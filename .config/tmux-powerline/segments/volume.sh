@@ -15,7 +15,11 @@ if [[ $platform == "Darwin" ]]; then
   }
 else
   run_segment() {
-    local info=$(amixer get PCM)
+    info=$(amixer get PCM)
+    if [ -z "$info" ]; then
+      info=$(amixer get Master)
+    fi
+  
     local volume=$(echo $info | paste -s | sed 's/.*\[\([0-9]*\)%.*/\1/')
     local mute=$(echo $info | grep "\[off\]")
     local is_quiet=$(echo "$volume == 0" | bc -l)
