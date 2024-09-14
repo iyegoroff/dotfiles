@@ -94,6 +94,13 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 	)
 fi
 
+xkb_layout="xkb_layout"
+platform=$(uname)
+
+if [[ $platform == "Darwin" ]]; then
+	xkb_layout="xkb_layout_osx"
+fi
+
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0" \
@@ -112,7 +119,7 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		"cpu_temp_low #303080 136" \
 		"cpu_temp_high #ff2020 235" \
 		"mem_use 235 136" \
-		"xkb_layout #004000 117" \
+		"${xkb_layout} #004000 117" \
 		# "date_day 235 136" \
 		"date 235 136" \
 		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
