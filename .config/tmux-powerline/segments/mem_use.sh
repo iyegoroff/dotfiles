@@ -7,12 +7,12 @@ if [[ $platform == "Darwin" ]]; then
     local mem=$(\
         vm_stat \
         | perl -ne '/page size of (\d+)/ and $size=$1; /Pages\s+([^:]+)[^\d]+(\d+)/ and printf("%-16s % 16.2f Mi\n", "$1:", $2 * $size / 1000000000);' \
-        | grep "^active\|wired\|by compressor\|speculative" \
+        | grep "^active\|wired\|compressor|\speculative" \
         | grep -o '[0-9\.]*' \
         | paste -sd+ - \
         | bc -l \
     )
-    echo "${mem} GB"
+    echo " ${mem} GB"
     return 0
   }
 
