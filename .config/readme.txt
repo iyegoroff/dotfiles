@@ -12,6 +12,3 @@
 - install tmux plugins (prefix + I)
 - install fonts
 
-
-
-
