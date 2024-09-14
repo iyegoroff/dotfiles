@@ -1,7 +1,7 @@
 live_config_reload = true
 
 [font]
-size = 13
+size = 13.5
 
 [font.bold]
 family = "RobotoMono Nerd Font"
