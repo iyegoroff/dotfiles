@@ -8,6 +8,8 @@
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/RobotoMono.zip -P $HOME
 	unzip $HOME/RobotoMono.zip -d $HOME/RobotoMono && rm -rf $HOME/RobotoMono.zip
+	cargo install taplo-cli --locked
+	npm i -g typescript-language-server vscode-langservers-extracted@4.8
 
 - install tmux plugins (prefix + I)
 - install fonts
