@@ -1,4 +1,39 @@
 [[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
 name = "openscad"
 auto-format = true
 formatter = { command = "clang-format", args = ["--style=file"] }
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = 'npx', args = [
+  "prettier",
+  "--config",
+  ".prettierrc",
+  "--parser",
+  "typescript",
+] }
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = 'npx', args = [
+  "prettier",
+  "--config",
+  ".prettierrc",
+  "--parser",
+  "typescript",
+] }

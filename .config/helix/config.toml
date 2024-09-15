@@ -20,7 +20,7 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 parents = false
-git-ignore = false
+# git-ignore = false
 
 [keys.normal]
 C-s = ":w"

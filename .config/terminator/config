@@ -1,0 +1,4 @@
+[profiles]
+  [[default]]
+    font = RobotoMono Nerd Font Mono 11
+    use_system_font = False
