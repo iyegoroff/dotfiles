@@ -1,5 +1,12 @@
 live_config_reload = true
 
+[window]
+startup_mode = "Fullscreen"
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux attach"]
+
 [font]
 size = 11
 
