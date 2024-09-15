@@ -10,7 +10,7 @@
     show_titlebar = False
     scrollbar_position = hidden
     use_custom_command = True
-    custom_command = tmux
+    custom_command = tmux attach
     use_system_font = False
 [layouts]
   [[default]]
