@@ -24,7 +24,8 @@ parents = false
 
 [keys.normal]
 C-s = ":w"
-C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w85% -h85% -E lazygit"
+C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E lazygit"
+C-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E \"tree --gitignore -C | less -R\""
 
 [keys.insert]
 up = "no_op"
