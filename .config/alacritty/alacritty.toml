@@ -4,7 +4,7 @@ live_config_reload = true
 startup_mode = "Fullscreen"
 
 [shell]
-program = "/bin/zsh"
+program = "/bin/bash"
 args = ["-l", "-c", "tmux attach"]
 
 [font]
