@@ -115,13 +115,13 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		# "weather 37 255" \
 		#"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \
 		"online_status 235 2 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"volume 148 234" \
-		"cpu_temp_low #303080 136" \
-		"cpu_temp_high #ff2020 235" \
-		"mem_use 235 136" \
-		"${xkb_layout} #004000 117" \
+		#"volume 148 234" \
+		# "cpu_temp_low #303080 136" \
+		# "cpu_temp_high #ff2020 235" \
+		"mem_use 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN} " \
+		#"${xkb_layout} #004000 117" \
 		# "date_day 235 136" \
-		"date 235 136" \
+		"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN} " \
 		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 		#"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 	)
