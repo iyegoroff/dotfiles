@@ -1,4 +1,0 @@
-inherits = "zenburn"
-"diagnostic.error" = { fg = "normal", bg = "errorfg" }
-"ui.cursor.match" = { fg = "#343434", bg = "constant", modifiers = ["bold"] }
-"ui.virtual.ruler" = { bg = "#804040" }

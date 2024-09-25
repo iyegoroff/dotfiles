@@ -12,5 +12,5 @@
 	npm i -g typescript-language-server vscode-langservers-extracted@4.8
 
 - install tmux plugins (prefix + I)
-- install fonts
+- install fonts (copy them to `/usr/local/share/fonts` and rebuild the font cache with `fc-cache -f -v`)
 
