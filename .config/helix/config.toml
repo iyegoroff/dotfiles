@@ -25,7 +25,7 @@ parents = false
 [keys.normal]
 C-s = ":w"
 C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E lazygit"
-C-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E \"tree --gitignore -C | less -R\""
+C-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E 'tree -C --gitignore | less -R'"
 
 [keys.insert]
 up = "no_op"
@@ -39,3 +39,4 @@ end = "no_op"
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
+o = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 50% -h 85% -E 'tmux send-keys \":o $(nnn -p -)\" Enter'"
