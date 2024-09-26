@@ -39,4 +39,11 @@ end = "no_op"
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
-o = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 50% -h 85% -E 'tmux send-keys \":o $(nnn -p -)\" Enter'"
+o = '''
+:sh tmux popup -d "#{pane_current_path}" -xC -yC -w 50% -h 85% -E 
+'tmux send ":o $(nnn -p -)" Enter'
+'''
+O = '''
+:sh tmux popup -d "#{pane_current_path}" -xC -yC -w 85% -h 85% -E 
+'tmux new "nnn -P v -p - | xargs -I {} tmux send -t $(tmux display-message -p \"#S.#P\") \":o {}\" Enter"\; set status off'
+'''
