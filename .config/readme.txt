@@ -3,11 +3,11 @@
 
 - setup config:
 
-	echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
-	echo "export NNN_FIFO='/tmp/nnn.fifo'" >> $HOME/.bashrc 
-	echo "export NNN_PLUG='v:preview-tui'" >> $HOME/.bashrc 
-	echo "export NNN_BATTHEME='Visual Studio Dark+'" >> $HOME/.bashrc 
-	source $HOME/.bashrc
+	echo "alias config=\"/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME\"" >> $HOME/.zshrc
+	echo "export NNN_FIFO=\"\$TMPDIR/nnn.fifo\"" >> $HOME/.zshrc
+	echo "export NNN_PLUG='v:preview-tui'" >> $HOME/.zshrc 
+	echo "export NNN_BATTHEME='Visual Studio Dark+'" >> $HOME/.zshrc 
+	source $HOME/.zshrc
 	git clone --bare git@github.com:iyegoroff/dotfiles.git $HOME/.cfg
 	config checkout
 	config config --local status.showUntrackedFiles no
