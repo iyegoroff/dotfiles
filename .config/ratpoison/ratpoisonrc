@@ -1,0 +1,8 @@
+escape Super_L
+bind c exec alacritty
+bind f exec firefox
+bind o exec openscad
+bind M-p exec loginctl poweroff
+bind M-r exec loginctl reboot
+unbind space
+bind s-space exec setxkbmap -query | grep -qw 'ru' && setxkbmap us || setxkbmap ru,us
