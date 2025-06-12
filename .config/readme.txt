@@ -1,5 +1,5 @@
 - install
-    git, wget, unzip, rust, curl, node, tmux, bat, nnn, tree, helix, alacritty, terminator
+    git, wget, unzip, rust, curl, node, tmux, bat, nnn, tree, helix, alacritty, terminator, bc, lm_sensors, xkblayout_state
 
 - setup config:
 
