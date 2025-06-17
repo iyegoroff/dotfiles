@@ -7,6 +7,7 @@
 	echo "export NNN_FIFO='/tmp/nnn.fifo'" >> $HOME/.bashrc 
 	echo "export NNN_PLUG='v:preview-tui'" >> $HOME/.bashrc 
 	echo "export NNN_BATTHEME='Visual Studio Dark+'" >> $HOME/.bashrc 
+	echo "export PATH='$HOME/.npm-packages/bin:$PATH'" >> $HOME/.bashrc
 	source $HOME/.bashrc
 	git clone --bare git@github.com:iyegoroff/dotfiles.git $HOME/.cfg
 	config checkout
