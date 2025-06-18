@@ -1,0 +1,16 @@
+bind ctrl-, any sideBySideContinuousMode
+bind ctrl-. any sideBySideSingleMode
+bind ctrl-R any loadSession
+bind ctrl-F any fullScreenMode sideBySideSingleMode
+unbind up any
+unbind left any
+unbind down any
+unbind right any
+bind up fullScreen,singlePage prevPage
+bind left fullScreen,singlePage prevPage
+bind down fullScreen,singlePage nextPage
+bind right fullScreen,singlePage nextPage
+bind k fullScreen,singlePage prevPage
+bind h fullScreen,singlePage prevPage
+bind j fullScreen,singlePage nextPage
+bind l fullScreen,singlePage nextPage
