@@ -1,8 +1,27 @@
 escape Super_L
+
+bind M-p exec loginctl poweroff
+bind M-r exec loginctl reboot
+
+bind grave time
+
+unbind -
+unbind k
+bind \ hsplit
+bind - vsplit
+bind k focusup
+bind j focusdown
+bind h focusleft
+bind l focusright
+
+unbind space
+bind s-space exec setxkbmap -query | grep -qw 'ru' && setxkbmap us || setxkbmap ru,us
+
+unbind a
+unbind A
 bind c exec alacritty
 bind f exec firefox
 bind o exec openscad
-bind M-p exec loginctl poweroff
-bind M-r exec loginctl reboot
-unbind space
-bind s-space exec setxkbmap -query | grep -qw 'ru' && setxkbmap us || setxkbmap ru,us
+bind a exec flatpak run com.google.AndroidStudio
+bind A exec rm .var/app/com.google.AndroidStudio/config/Google/AndroidStudio*/.lock && flatpak run com.google.AndroidStudio
+bind O exec Xephyr :1 -br -screen $(xdpyinfo | grep -oP 'dimensions:\s+\K\S+') & (sleep 3 && blackbox -rc .config/blackbox/blackboxrc -display :1) & (DISPLAY=:1 flatpak run io.github.softfever.OrcaSlicer && pkill -x Xephyr)
