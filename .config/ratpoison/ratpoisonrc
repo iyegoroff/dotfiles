@@ -1,3 +1,5 @@
+exec /usr/bin/rpws init 4 -k
+
 escape Super_L
 
 bind M-p exec loginctl poweroff
