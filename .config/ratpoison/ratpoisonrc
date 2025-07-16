@@ -1,16 +1,21 @@
 exec /usr/bin/rpws init 4 -k
+exec xbanish & xsetroot -cursor_name left_ptr & picom --backend glx --vsync
+exec alacritty
+
+startup_message off
 
 escape Super_L
 
 bind M-p exec loginctl poweroff
 bind M-r exec loginctl reboot
+bind M-l exec pkill -x ratpoison
 
 bind grave time
 
-unbind -
 unbind k
-bind \ hsplit
-bind - vsplit
+unbind minus
+bind backslash hsplit
+bind minus vsplit
 bind k focusup
 bind j focusdown
 bind h focusleft
