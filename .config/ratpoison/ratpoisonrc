@@ -26,6 +26,8 @@ bind s-space exec setxkbmap -query | grep -qw 'ru' && setxkbmap us || setxkbmap 
 
 unbind a
 unbind A
+unbind v
+bind v exec flatpak run com.vscodium.codium
 bind c exec alacritty
 bind f exec firefox
 bind o exec openscad

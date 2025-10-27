@@ -24,8 +24,8 @@ parents = false
 
 [keys.normal]
 C-s = ":w"
-C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E lazygit"
-C-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85% -h 85% -E 'tree -C --gitignore | less -R'"
+C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85%% -h 85%% -E lazygit"
+C-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w 85%% -h 85%% -E 'tree -C --gitignore | less -R'"
 
 [keys.insert]
 up = "no_op"
@@ -39,11 +39,3 @@ end = "no_op"
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
-o = '''
-:sh tmux popup -d "#{pane_current_path}" -xC -yC -w 50% -h 85% -E 
-'tmux send ":o $(nnn -p -)" Enter'
-'''
-O = '''
-:sh tmux popup -d "#{pane_current_path}" -xC -yC -w 85% -h 85% -E 
-'tmux new "nnn -P v -p - | xargs -I {} tmux send -t $(tmux display-message -p \"#S.#P\") \":o {}\" Enter"\; set status off'
-'''
