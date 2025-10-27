@@ -14,4 +14,12 @@ if [[ $platform == "Darwin" ]]; then
 
     return 0
   }
+else
+  run_segment() {
+    local input=$(xkblayout-state print %s)
+
+    echo "󰌌 ${input}"
+
+    return 0
+  }
 fi

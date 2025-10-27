@@ -227,8 +227,10 @@
 	TMUX_POWERLINE_SEG_WEATHER_LON=""
 # }
 
-# cpu_temp_low.sh, cpu_temp_high.sh {
-    export TMUX_POWERLINE_SEG_CPU_TEMP_THRESHOLD=60	
+# cpu_temp.sh {
+    export TMUX_POWERLINE_SEG_CPU_TEMP_HIGH=60
+    export TMUX_POWERLINE_SEG_CPU_TEMP_ICON=" "
+    export TMUX_POWERLINE_SEG_CPU_TEMP_LINE_MARKER="Package id 0\|Physical id 0\|temp1"
 # } 
 
 export TMUX_POWERLINE_SEG_XKB_LAYOUT_ICON="󰌌"

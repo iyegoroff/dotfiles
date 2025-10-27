@@ -1,13 +1,24 @@
 - install
-    git, wget, unzip, rust, curl, node, tmux, bat, nnn, tree, helix, alacritty, terminator
+    git, wget, unzip, rust, curl, node, tmux, bat, nnn, tree, helix, alacritty, terminator, bc, lm_sensors, xkblayout_state, bash-completion, xorg, ratpoison, xz, network-ups-tools
 
 - setup config:
 
+<<<<<<< HEAD
 	echo "alias config=\"/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME\"" >> $HOME/.zshrc
 	echo "export NNN_FIFO=\"\$TMPDIR/nnn.fifo\"" >> $HOME/.zshrc
 	echo "export NNN_PLUG='v:preview-tui'" >> $HOME/.zshrc 
 	echo "export NNN_BATTHEME='Visual Studio Dark+'" >> $HOME/.zshrc 
 	source $HOME/.zshrc
+=======
+	echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+	echo "export NNN_FIFO='/tmp/nnn.fifo'" >> $HOME/.bashrc 
+	echo "export NNN_PLUG='v:preview-tui'" >> $HOME/.bashrc 
+	echo "export NNN_BATTHEME='Visual Studio Dark+'" >> $HOME/.bashrc 
+	echo "export PATH='$HOME/.npm-packages/bin:$PATH'" >> $HOME/.bashrc
+    echo "sudo dmesg -n 1" >> /etc/rc.local
+    cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
+	source $HOME/.bashrc
+>>>>>>> main
 	git clone --bare git@github.com:iyegoroff/dotfiles.git $HOME/.cfg
 	config checkout
 	config config --local status.showUntrackedFiles no
@@ -20,4 +31,6 @@
 
 - install tmux plugins (prefix + I)
 - install fonts (copy them to `/usr/local/share/fonts` and rebuild the font cache with `fc-cache -f -v`)
+- install grub
+- replace ucpid with elogind + dbus
 

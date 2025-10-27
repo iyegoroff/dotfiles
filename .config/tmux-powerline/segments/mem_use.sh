@@ -12,7 +12,7 @@ if [[ $platform == "Darwin" ]]; then
         | paste -sd+ - \
         | bc -l \
     )
-    echo " ${mem} GB"
+    echo " ${mem} G"
     return 0
   }
 

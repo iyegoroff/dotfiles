@@ -1,6 +1,8 @@
 # Default Theme
 # If changes made here does not take effect, then try to re-create the tmux session to force reload.
 
+source "$TMUX_POWERLINE_CONFIG_DIR/cpu_temp_util.sh"
+
 if patched_font_in_use; then
 	TMUX_POWERLINE_SEPARATOR_LEFT_BOLD=""
 	TMUX_POWERLINE_SEPARATOR_LEFT_THIN=""
@@ -94,13 +96,6 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 	)
 fi
 
-xkb_layout="xkb_layout"
-platform=$(uname)
-
-if [[ $platform == "Darwin" ]]; then
-	xkb_layout="xkb_layout_osx"
-fi
-
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
 		#"earthquake 3 0" \
@@ -109,17 +104,22 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		#"mailcount 9 255" \
 		#"now_playing 234 37" \
 		# "cpu 240 136" \
-		#"load 237 167" \
+		# "load 237 167" \
 		# "tmux_mem_cpu_load 234 136" \
-		#"battery 137 127" \
+		# "battery 137 127" \
 		# "weather 37 255" \
 		#"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \
 		"online_status 235 2 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
 		"volume 148 234" \
-		"cpu_temp_low #303080 136" \
-		"cpu_temp_high #ff2020 235" \
+		"$(
+		  if (($(cpu_temp_is_high))); then
+		    echo "cpu_temp #ff2020 235"
+		  else
+		    echo "cpu_temp #303080 136"
+		  fi
+		)" \
 		"mem_use 235 136" \
-		"${xkb_layout} #004000 117" \
+		"xkb_layout #004000 117" \
 		# "date_day 235 136" \
 		"date 235 136" \
 		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
