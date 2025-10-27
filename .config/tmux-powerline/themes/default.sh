@@ -118,9 +118,6 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
 		    echo "cpu_temp #303080 136"
 		  fi
 		)" \
-    # $($(cpu_temp_is_high) && "cpu_temp #ff2020 235" || "cpu_temp #303080 136") \
-		# "cpu_temp_low #303080 136" \
-		# "cpu_temp_high #ff2020 235" \
 		"mem_use 235 136" \
 		"xkb_layout #004000 117" \
 		# "date_day 235 136" \
