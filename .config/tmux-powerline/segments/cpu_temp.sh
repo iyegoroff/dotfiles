@@ -10,7 +10,7 @@ run_segment() {
   local temp=$(cpu_temp_value)
 
   if [ -n "$temp" ]; then
-      echo "$TMUX_POWERLINE_SEG_CPU_TEMP_ICON$temp°"
+      echo "${TMUX_POWERLINE_SEG_CPU_TEMP_ICON}${temp}°"
       return 0
   else
 	    return 1

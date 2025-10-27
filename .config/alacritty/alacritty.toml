@@ -2,7 +2,7 @@
 [window]
 startup_mode = "Fullscreen"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach"]
 
