@@ -46,15 +46,6 @@
 	#export TMUX_POWERLINE_MUTE_RIGHT_KEYBINDING="C-]"
 # }
 
-# _cpu_temp.sh {
-	# The minimum temperature considered "high" by tp_cpu_temp_is_high function
-	export TMUX_POWERLINE_SEG_CPU_TEMP_HIGH=60
-	# CPU temperature icon
-	export TMUX_POWERLINE_SEG_CPU_TEMP_ICON=" "
-	# Regexp to indicate a line containing CPU temperature in sensors output
-	export TMUX_POWERLINE_SEG_CPU_TEMP_SENSORS_LINE_MARKER="Package id 0\|Physical id 0\|temp1"
-# }
-
 # air.sh {
 	# The data provider to use. Currently only "openweather" is supported.
 	export TMUX_POWERLINE_SEG_AIR_DATA_PROVIDER="openweather"
@@ -77,9 +68,16 @@
 	export TMUX_POWERLINE_SEG_BATTERY_NUM_HEARTS="5"
 # }
 
+# cpu_temp.sh {
+    # CPU temperature icon
+    export TMUX_POWERLINE_SEG_CPU_TEMP_ICON=" "
+    # Regexp to indicate a line containing CPU temperature in sensors output
+    export TMUX_POWERLINE_SEG_CPU_TEMP_SENSORS_LINE_MARKER="Package id 0\|Physical id 0\|temp1"
+# }
+
 # date.sh {
 	# date(1) format for the date. If you don't, for some reason, like ISO 8601 format you might want to have "%D" or "%m/%d/%Y".
-	export TMUX_POWERLINE_SEG_DATE_FORMAT="%F"
+	export TMUX_POWERLINE_SEG_DATE_FORMAT="%a %d %b"
 # }
 
 # date_week.sh {
