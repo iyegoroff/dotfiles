@@ -116,6 +116,7 @@ fi
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
     "online_status 235 2 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
+		"tmux_mem_cpu_load 234 136"
     "volume 148 234"
     "$(
       if (($(tp_cpu_temp_at_least 60))); then
