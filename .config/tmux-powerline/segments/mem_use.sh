@@ -71,7 +71,7 @@ tp_mem_used_megabytes() {
 
 tp_mem_used_percentage_at_least() {
 	read -r mem_used_bytes mem_total_bytes < <(__tp_mem_used_info)
-	echo "$mem_used_bytes / $mem_total_bytes" | bc -l
+	echo "($mem_used_bytes / $mem_total_bytes) * 100 >= $1" | bc -l
 }
 
 run_segment() {
