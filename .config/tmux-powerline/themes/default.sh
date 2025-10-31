@@ -116,7 +116,6 @@ fi
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
     "online_status 235 2 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
-		"tmux_mem_cpu_load 234 136"
     "volume 148 234"
     "$(
       if (($(tp_cpu_temp_at_least 60))); then
@@ -127,11 +126,11 @@ if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
     )"
     "$(
       if (($(tp_mem_used_percentage_at_least 90))); then
-        echo "mem_use #ff2020 235"
+        echo "mem_used #ff2020 235"
       elif (($(tp_mem_used_percentage_at_least 75))); then
-      	echo "mem_use 136 235"
+      	echo "mem_used 136 235"
       else
-				echo "mem_use 235 136"
+				echo "mem_used 235 136"
       fi
     )"
     "xkb_layout #004000 117"
