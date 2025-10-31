@@ -133,7 +133,6 @@ if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 				echo "mem_used 235 136"
       fi
     )"
-		"tmux_mem_cpu_load 234 136"
     "xkb_layout #004000 117"
     "date 235 136"
     "time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}"
